@@ -1,31 +1,59 @@
 body{
 	background-color: #d7eaf4;
 }
-.page-header{
-	margin: auto;
-	overflow:auto;
-	background-color: #51bfff;
-}
-h1 {
-  font-size: 5.0vw;
-}
-.page-header img{ 
-	margin-left: 5%; 
-	margin-right: 5%;
-}
 .jumbotron{
 	border: 1px solid black;
 	margin: 25px auto;
-	padding: 10px;
+	pad	ding: 10px;
 	background-color:white;
     color:black;
 }
 .jumbotron h4{
 	text-align: center;
 }
-.navbar navbar-default{
-	background-color: inherit;
+.navlogo .navbar-brand {
+  padding-top: 5px;
+  padding-left: 0px;
+  height: 80px;
 }
+.navlogo .nav >li >a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navlogo .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #000;  /*Sets the text hover color on navbar*/
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: white; /*BACKGROUND color for active*/
+	background-color: #337ab7;
+}
+.navbar-default {
+    background-color: #51bfff;
+}
+.dropdown-menu>li>a, .open .dropdown-menu {
+    background-color: #51bfff;
+    color:#ffffff;
+  }
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: #337ab7;  /*change color of links in drop down here*/
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: silver; /*Change rollover cell color here*/
+}
+.navbar-default .navbar-nav > li > a {
+    color: white; /*Change active text color here*/
+}
+	
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
@@ -64,4 +92,35 @@ h1 {
     height: 36px;
     border-radius: 3px;
     border: none;
+}
+
+.section{
+	background-color: #d7eaf4;
+	padding: 25px;
+}
+.submitbox{
+	background-color: white;
+	max-width: 300px;
+	vertical-align: center;
+	padding: 10px;
+	border-radius: 10px;
+}
+.button{
+	padding: 5px;
+}
+p.submitblurb{
+	font-size: 14px;
+	color: #000000;
+	text-align: center;
+}
+th{
+	padding: 5px;
+	font-style: italic;
+}
+
+@media screen and (max-width: 768px){
+    .navlogo .navbar-brand{
+        width: 270px;
+		padding-top: 5%;
+    }
 }

@@ -3,14 +3,12 @@ package com.project.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@Scope("session")
 public class UserLoginController {
 	
 	@Autowired
@@ -30,7 +28,6 @@ public class UserLoginController {
 	
 	@RequestMapping(value="/UserLoginController", method=RequestMethod.POST)
 	public String checkCredentials(String userName, String password){
-
 		String sql = "select count(*) from user_login where User_Name=? AND Password=?";
 		int count = this.getJdbcTemplate().queryForObject(sql, new Object[]{userName, password}, Integer.class);
 		

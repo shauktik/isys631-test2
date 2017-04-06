@@ -2,34 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title> Forever Live Hotels </title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-	<link rel="stylesheet" type="text/css" href="master.css"></link>
+	<title>Forever Live Hotels</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="master.css">
 	
 </head>
 
 	<body>
 
 	<div class="container-fluid">
-		<div class="page-header text-center">
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
-						<img src="Suitcase_Heavy_opt.png" alt="Home" class="img-responsive pull-left"></img>
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
-						<h1>Forever Live Hotels</h1>
-					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-						<img src="fl_opt.png" alt="Profile" class="img-responsive pull-right" style="margin: 5%">
-					</div>
-		</div>
+		<div class="navlogo">
+			  <nav class="navbar navbar-default navbar-static-top">
+				<div class="container">
+				  <div class="navbar-header">
+					<a class="navbar-brand" href="www.google.com"><img src="Suitcase_Logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
+					</a>
+				  </div>	  
+				</div>
+			  </nav>
+			</div>
 		<div class="container">
 			<div class="card card-container">
 				<img id="profile-img" class="profile-img-card" src="SuitcasePro.png" />
 				<p id="profile-name" class="profile-name-card"></p>
-				<form class="form-signin" action="/UserLoginController" method=POST>
+				<form class="form-signin" action="http://localhost:8080/UserLoginController" method=POST>
 					<span id="reauth-email" class="reauth-email"></span>
 					<input type="email" name="userName" id="inputEmail" class="form-control" placeholder="Email address" required autofocus></input>
 					<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required></input>
@@ -42,18 +41,18 @@
 				</form>
 				<br>
 				<div class= "text-center">
-					<a href="#" class="forgot-password"></a>
+					<a href="#" class="forgot-password">
 						Forgot password?
 				</div>
 				</a><br><br>
 				<div class= "text-center">
-					<button type="button" class="btn btn-primary"><strong>&nbsp;&nbsp;&nbsp;&nbsp; Support &nbsp;&nbsp;&nbsp;&nbsp;</strong></button>&nbsp;&nbsp;
+					<button type="button" class="btn btn-primary"><strong>&nbsp;&nbsp;&nbsp;&nbsp; Support &nbsp;&nbsp;&nbsp;&nbsp;</strong></button>
 						<button type="button" class="btn btn-primary"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></button>
 				</div>
 			</div>
 		</div>		
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>
