@@ -53,9 +53,7 @@ public class UserProfileController {
 	@RequestMapping(value="/fetchUserDetails", method=RequestMethod.GET)
 	public UserProfile fetchUserDetails(){
 		
-		System.out.println("User Profile Controller Called");
 		String userName = (String)session.getAttribute("user_name");
-		System.out.println("Session user name::"+userName);
 		String sql = "SELECT * FROM user_profile where user_name=?;";
 		
 		this.setUserProfile(this.getJdbcTemplate().queryForObject(sql, new Object[]{userName}, new UserRowMapper()));
