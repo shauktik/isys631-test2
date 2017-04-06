@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title> Profile </title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="master.css">
+
+	</head>
+
+	<body>
+	<script type="text/javascript">
+	pageLoad();
+	$(document).ready(function(){
+		$.ajax({
+			type : "GET",
+			url : "/fetchUserDetails",
+			
+			timeout : 1000,
+		})
+	});
+	</script>
+		<div class="container-fluid">
+			<div class="page-header text-center">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+					<img src="Suitcase_Heavy_opt.png" alt="Home" class="img-responsive pull-left">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+					<h1>VIEW SCHEDULE</h1>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<img src="fl_opt.png" alt="Profile" class="img-responsive pull-right" style="margin: 5%">
+				</div>
+				<div class="container-fluid	>
+				  <nav class="navbar navbar-default">
+					  <div class="navbar-header" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<button type="button" class="navbar-toggle collapsed navbar-toggle-center" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="glyphicon glyphicon-menu-hamburger"></span>
+						  <span class="navmenu">MENU</span>
+						</button>
+					  </div>
+					  <div class="collapse navbar-collapse navbar-nav-justified" id="bs-example-navbar-collapse-1">
+						<ul class="nav nav-pills nav-justified">
+						  <li><a href="sched.html">Home</a></li>
+						  <li><a href="#">Setup Schedule</a></li>
+						  <li><a href="#">Timesheets</a></li>
+						  <li class="active"><a href="#">Edit Profile</a></li>
+						  <li><a href="login.html">Logout</a></li>
+						  
+						</ul>
+					  </div>
+				  </nav>
+				</div>
+			</div>
+			<div class= "row">
+				<div class="col-md-12 col-sm-6 col-xs-12 personal-info">
+				  <form class="form-horizontal" role="form">
+					<br><br>
+					<div class= "container">
+					<div class="form-group">
+					  <label class="col-lg-3 control-label">First name:</label>
+					  <div class="col-lg-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-lg-3 control-label">Last name:</label>
+					  <div class="col-lg-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-lg-3 control-label">Address:</label>
+					  <div class="col-lg-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-lg-3 control-label">Email:</label>
+					  <div class="col-lg-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-3 control-label">Phone Number:</label>
+					  <div class="col-md-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-3 control-label">DOB:</label>
+					  <div class="col-md-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-3 control-label">SSN:</label>
+					  <div class="col-md-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-3 control-label">Job Role:</label>
+					  <div class="col-md-6">
+						<input class="form-control" value="" type="text">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-3 control-label"></label>
+					  <div class="col-md-8">
+						<input class="btn btn-primary" value="Save Changes" type="button">
+						<span></span>
+						<input class="btn btn-default" value="Cancel" type="reset">
+					  </div>
+					</div>
+				  </form>
+				</div>
+				</div>
+			</div>
+		</div>   
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

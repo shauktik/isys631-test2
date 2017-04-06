@@ -1,0 +1,65 @@
+body{
+	background-color: #d7eaf4;
+}
+.page-header{
+	margin: auto;
+	overflow:auto;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #51bfff;
+	float: none;
+}
+.jumbotron{
+	border: 1px solid black;
+	margin: 25px auto;
+	padding: 10px;
+	background-color:white;
+    color:black;
+}
+.jumbotron h4{
+	text-align: center;
+}
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    user-select: none;
+    cursor: default;
+}
+
+.card {
+    background-color: #F7F7F7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    border-radius: 2px;
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 50%;
+}
+
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.btn.btn-signin {
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    border-radius: 3px;
+    border: none;
+}

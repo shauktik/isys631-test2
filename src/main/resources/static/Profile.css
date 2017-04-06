@@ -1,0 +1,19 @@
+body{
+	background-color: #d7eaf4;
+}
+.page-header{
+	margin: auto;
+	overflow:auto;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #51bfff;
+	float: none;
+    font-family: Verdana;
+}
+.jumbotron{
+	border: 1px solid black;
+	margin: 25px auto;
+	padding: 10px;
+	background-color:white;
+    color:black;
+}
