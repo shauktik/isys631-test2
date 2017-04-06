@@ -51,16 +51,16 @@ public class UserProfileController {
 
 	@ResponseBody
 	@RequestMapping(value="/fetchUserDetails", method=RequestMethod.GET)
-	public String fetchUserDetails(){
+	public UserProfile fetchUserDetails(){
 		
 		System.out.println("User Profile Controller Called");
 		String userName = (String)session.getAttribute("user_name");
 		System.out.println("Session user name::"+userName);
-		String sql = "SELECT * FROM foreverlive.user_profile where user_name=?;";
+		String sql = "SELECT * FROM user_profile where user_name=?;";
 		
 		this.setUserProfile(this.getJdbcTemplate().queryForObject(sql, new Object[]{userName}, new UserRowMapper()));
 		
-		return "userProfile";
+		return userProfile;
 		
 	}
 
