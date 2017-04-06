@@ -23,6 +23,7 @@
 			timeout : 1000,
 			
 			success : function(data){
+				alert(data.firstName);
 				$('#test21').val(data.firstName);
 			}
 		})
