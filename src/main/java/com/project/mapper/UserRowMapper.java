@@ -15,7 +15,10 @@ public class UserRowMapper implements RowMapper<UserProfile>{
 		
 		UserProfile userProfile = new UserProfile();
 		
-		userProfile.setAddress(rs.getString("Address"));
+		userProfile.setAddressline1(rs.getString("Address_Line1"));
+		userProfile.setAddressline2(rs.getString("Address_Line2"));
+		userProfile.setState(rs.getString("State"));
+		userProfile.setZip(rs.getInt("ZIP"));
 		userProfile.setDob(rs.getString("DOB"));
 		userProfile.setHourlyWage(rs.getInt("Hourly_wage"));
 		userProfile.setJobRole(rs.getString("Job_Role"));

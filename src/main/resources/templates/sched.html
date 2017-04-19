@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+		
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="master.css">
+
+    </head>
+
+    <body>
+		<div class="navlogo">
+		  <nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://liveforeverdemo.herokuapp.com/"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
+				</a>
+			  </div>
+			  <div id="navbar3" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					  <li class="active"><a href="#">Home</a></li>
+					  <li><a href="#">Setup Schedule</a></li>
+					  <li><a href="timesheet.html">Timesheets</a></li>
+				  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+					  <li><a href="eprofile.html">Edit Profile</a></li>						  
+					  <li class="divider"></li>
+					  <li><a href="login.html">Logout</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		</div>	
+		<div class="container-fluid">			
+			<div class="row">
+				<div class="container-fluid">
+					<div class="col-lg-8 col-md-8 col-sm-8 hidden-xs">
+						<div class="jumbotron">
+							<div class="container-fluid">
+								<br>
+								<h3><strong>Schedule for the weeks <span id="currwkdt"></span></strong></h3>
+								<br>
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Week</th>
+											<th>Sunday</th>
+											<th>Monday</th>
+											<th>Tuesday</th>
+											<th>Wednesday</th>
+											<th>Thursday</th>
+											<th>Friday</th>
+											<th>Saturday</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+										  <th scope="row"><span id="currwk"></span></th>
+										  <td><span id="bamorn" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										  <td></td>
+										  <td></td>
+										  <td><span id="bamorn" class="badge"> </span></td>
+										  <td></td>
+										  <td></td>
+										  <td><span id="baaft" class="badge"> </span></td>
+										</tr>
+										<tr>
+										  <th scope="row"><span id="currwk1"></span></th>
+										  <td></td>
+										  <td></td>
+										  <td><span id="bamorn" class="badge"> </span></td>
+										  <td></td>
+										  <td><span id="baaft" class="badge"> </span></td>
+										  <td></td>
+										  <td><span id="bamorn" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+						<div class="jumbotron">
+							<div class="container-fluid">
+								<br>
+								<h4><strong>Schedule for the weeks of <span id="currwkdtr"></span></strong></h4>									
+								<br>
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>WK</th>
+											<th>Su</th>
+											<th>Mo</th>
+											<th>Tu</th>
+											<th>We</th>
+											<th>Th</th>
+											<th>Fr</th>
+											<th>Sa</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+										  <th scope="row"><span id="currwkr"></span></th>
+										  <td><span id="bamorn" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										  <td></td>
+										  <td></td>
+										  <td><span id="bamorn" class="badge"> </span></td>
+										  <td></td>
+										  <td></td>
+										  <td><span id="baaft" class="badge"> </span></td>
+										</tr>
+										<tr>
+										  <th scope="row"><span id="currwk1r"></span></th>
+										  <td></td>
+										  <td></td>
+										  <td><span id="bamorn" class="badge"> </span></td>
+										  <td></td>
+										  <td><span id="baaft" class="badge"> </span></td>
+										  <td></td>
+										  <td><span id="bamorn" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="jumbotron">
+							<div id="schedrop" class="container-fluid">
+								<br>
+								<div class="form-group">
+								  <label>Emergency? Need to drop a shift?</label>
+								  <textarea class="form-control" rows="3"  placeholder="Please enter week number, day and shift type (morning/afternoon/night) in your message."></textarea>
+								</div>
+								<img src="Sad_Suitcase_opt.jpg" alt="..." class="img-responsive pull-left">
+								<br>
+								&nbsp &nbsp <button type="button" class="btn btn-primary"><strong>Drop Shift</strong></button>
+								<br><br><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container-fluid">
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+						<div class="jumbotron">
+							<div class="container-fluid">
+								<br>
+								<h4>You look fantastic today! Have you done something different with your hair?
+								<br><br><br>
+								Have you filled your timesheet for last week? - Enter hours worked <a href="timesheet.html">here</a>
+								</h4>
+								<br>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
+						<div id="legend" class="jumbotron">
+							<div class="container-fluid">					
+								<h4><strong>Legend</strong></h4>
+								<ul class="list-group">
+									<li class="list-group-item list-group-item-info">Morning</li>
+									<li class="list-group-item list-group-item-success">Afternoon</li>
+									<li class="list-group-item list-group-item-danger">Night</li>
+								</ul>
+							</div>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="http://momentjs.com/downloads/moment.js"></script>
+		<script type="text/javascript" src="sched.js"></script>			
+	</body>
+</html>
+

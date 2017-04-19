@@ -5,11 +5,15 @@ public class UserProfile {
 	private String firstName;
 	private String lastName;
 	private String dob;
-	private String address;
+	private String addressline1;
+	private String addressline2;
+	private String state;
+	private int zip;
 	private String phoneNumber;
 	private String ssn;
 	private String jobRole;
 	private int hourlyWage;
+	
 	
 	public String getFirstName() {
 		return firstName;
@@ -28,12 +32,6 @@ public class UserProfile {
 	}
 	public void setDob(String dob) {
 		this.dob = dob;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -58,6 +56,30 @@ public class UserProfile {
 	}
 	public void setHourlyWage(int hourlyWage) {
 		this.hourlyWage = hourlyWage;
+	}
+	public String getAddressline1() {
+		return addressline1;
+	}
+	public void setAddressline1(String addressline1) {
+		this.addressline1 = addressline1;
+	}
+	public String getAddressline2() {
+		return addressline2;
+	}
+	public void setAddressline2(String addressline2) {
+		this.addressline2 = addressline2;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public int getZip() {
+		return zip;
+	}
+	public void setZip(int zip) {
+		this.zip = zip;
 	}
 	
 	

@@ -1,16 +1,27 @@
+body.landing{
+	background: url("chicago3.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
 body{
 	background-color: #d7eaf4;
 }
 .jumbotron{
 	border: 1px solid black;
-	margin: 25px auto;
-	pad	ding: 10px;
+	margin: 12px auto;
+	padding: 10px 0px;
 	background-color:white;
     color:black;
 }
 .jumbotron h4{
+	font-size: 2.7vh;
 	text-align: center;
 }
+.jumbotron h3{
+	font-size: 2vw;	
+	font-size: 4vh;
+	text-align: center;
+}
+
 .navlogo .navbar-brand {
   padding-top: 5px;
   padding-left: 0px;
@@ -25,38 +36,47 @@ body{
   margin: 25px 15px 25px 0;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-color: #000;  /*Sets the text hover color on navbar*/
+	color: #000000;  /*Sets the text hover color on navbar*/
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
  a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: white; /*BACKGROUND color for active*/
+	color: #ffffff; /*BACKGROUND color for active*/
 	background-color: #337ab7;
 }
 .navbar-default {
+	color: #ffffff;
     background-color: #51bfff;
 }
 .dropdown-menu>li>a, .open .dropdown-menu {
+	color:#ffffff;
     background-color: #51bfff;
-    color:#ffffff;
-  }
+}
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-    color: #262626;
-    text-decoration: none;
+    color: #000000;
     background-color: #337ab7;  /*change color of links in drop down here*/
 }
-.nav > li > a:hover,
-.nav > li > a:focus {
-    text-decoration: none;
-    background-color: silver; /*Change rollover cell color here*/
+.navbar .navbar-nav > li.open > a:hover,
+.navbar .navbar-nav > li.open > a:focus {
+  background-color: #337ab7;
+  color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a {
-    color: white; /*Change active text color here*/
+    color: #ffffff; /*Change active text color here*/
+}	
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	color: #ffffff;
 }
-	
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a, 
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, 
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
+color: #ffffff;
+background-color: #337ab7;
+}
+
 .card-container.card {
     max-width: 350px;
-    padding: 40px 40px;
+    padding: 25px 40px;
 }
 .btn {
     font-weight: 700;
@@ -68,7 +88,7 @@ color: #000;  /*Sets the text hover color on navbar*/
     background-color: #F7F7F7;
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
-    margin-top: 50px;
+    margin-top: 12px;
     border-radius: 2px;
 }
 .profile-img-card {
@@ -93,7 +113,6 @@ color: #000;  /*Sets the text hover color on navbar*/
     border-radius: 3px;
     border: none;
 }
-
 .section{
 	background-color: #d7eaf4;
 	padding: 25px;
@@ -108,16 +127,53 @@ color: #000;  /*Sets the text hover color on navbar*/
 .button{
 	padding: 5px;
 }
-p.submitblurb{
-	font-size: 14px;
-	color: #000000;
-	text-align: center;
-}
-th{
-	padding: 5px;
-	font-style: italic;
-}
 
+#schedrop.container-fluid{
+	padding: 0px;
+}
+#legend.jumbotron{
+	padding: 0px;
+	background-color: inherit; 
+}
+.list-group-item {
+    padding: 5px 20px
+}
+.list-group-item-info{
+	background-color:#42bff4;
+}
+.list-group-item-success{
+	background-color:#cfefc6;
+}
+.list-group-item-danger{
+	background-color:#efb8b8;
+}
+#bamorn.badge{
+	background-color:#42bff4;
+}
+#baaft.badge{
+	background-color:#cfefc6;
+}
+#banig.badge{
+	background-color:#efb8b8;
+}
+#batod.badge{
+	background-color:#82556e;
+}
+.shorty{
+	max-height: 21px;
+	max-width: 70px;
+	text-align: center;
+	margin: auto 2vw;
+}
+.input-sm{
+	max-height: 27px;
+	margin: auto 0px;
+}
+@media screen and (max-width: 768px){
+    .shorty{
+		text-align: center;
+		margin: auto 0vw;
+    }
 @media screen and (max-width: 768px){
     .navlogo .navbar-brand{
         width: 270px;
