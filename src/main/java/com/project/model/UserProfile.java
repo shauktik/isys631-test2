@@ -13,8 +13,17 @@ public class UserProfile {
 	private String ssn;
 	private String jobRole;
 	private int hourlyWage;
+	private String user_Name;
 	
 	
+	
+	
+	public String getUser_Name() {
+		return user_Name;
+	}
+	public void setUser_Name(String user_Name) {
+		this.user_Name = user_Name;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

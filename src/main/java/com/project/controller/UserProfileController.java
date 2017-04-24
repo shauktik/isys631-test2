@@ -62,6 +62,11 @@ public class UserProfileController {
 		
 	}
 	
+	@RequestMapping(value="/userProfilePage", method=RequestMethod.GET)
+	public String userProfilePage(){
+		return "success";
+	}
+	
 	@RequestMapping(value="/updateUserDetails", method=RequestMethod.PUT)
 	public void updateUserDetails(UserProfile userProfile){
 		

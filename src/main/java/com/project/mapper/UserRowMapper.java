@@ -26,6 +26,7 @@ public class UserRowMapper implements RowMapper<UserProfile>{
 		userProfile.setSsn(rs.getString("SSN"));
 		userProfile.setLastName(rs.getString("Last_Name"));
 		userProfile.setFirstName(rs.getString("First_Name"));
+		userProfile.setUser_Name(rs.getString("User_Name"));
 		
 		return userProfile;
 	}

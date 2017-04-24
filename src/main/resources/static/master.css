@@ -51,6 +51,7 @@ body{
 	color:#ffffff;
     background-color: #51bfff;
 }
+
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
     color: #000000;
@@ -133,7 +134,6 @@ background-color: #337ab7;
 }
 #legend.jumbotron{
 	padding: 0px;
-	background-color: inherit; 
 }
 .list-group-item {
     padding: 5px 20px

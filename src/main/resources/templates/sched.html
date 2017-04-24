@@ -22,23 +22,24 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://liveforeverdemo.herokuapp.com/"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
+				<a class="navbar-brand" href="/userProfilePage"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
 				</a>
 			  </div>
 			  <div id="navbar3" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					  <li class="active"><a href="#">Home</a></li>
-					  <li><a href="#">Setup Schedule</a></li>
-					  <li><a href="timesheet.html">Timesheets</a></li>
-				  <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-					  <li><a href="eprofile.html">Edit Profile</a></li>						  
-					  <li class="divider"></li>
-					  <li><a href="login.html">Logout</a></li>
+					<ul class="nav navbar-nav navbar-right">
+						  <li><a href="/mySchedule">Home</a></li>
+						  <li><a href="/userProfilePage">Edit Profile</a></li>
+						  <li><a href="/timesheets">Timesheets</a></li>
+					  <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						  <li><a href="/aboutUs">About Us</a></li>
+						  <li><a href="/contact">Contact Us</a></li>						  
+						  <li class="divider"></li>
+						  <li><a href="/logout">Logout</a></li>
+						</ul>
+					  </li>
 					</ul>
-				  </li>
-				</ul>
 			  </div>
 			</div>
 		  </nav>
@@ -140,13 +141,15 @@
 						<div class="jumbotron">
 							<div id="schedrop" class="container-fluid">
 								<br>
+								<form action="/shiftdrop" method=POST>
 								<div class="form-group">
 								  <label>Emergency? Need to drop a shift?</label>
-								  <textarea class="form-control" rows="3"  placeholder="Please enter week number, day and shift type (morning/afternoon/night) in your message."></textarea>
+								  <textarea class="form-control" rows="3" name="dropshift" placeholder="Please enter week number, day, shift type (morning/afternoon/night) and optional message separated by spaces in your message." name="dropShiftMessage"></textarea>
 								</div>
 								<img src="Sad_Suitcase_opt.jpg" alt="..." class="img-responsive pull-left">
 								<br>
-								&nbsp &nbsp <button type="button" class="btn btn-primary"><strong>Drop Shift</strong></button>
+								&nbsp; &nbsp; <button type="submit" class="btn btn-primary"><strong>Drop Shift</strong></button>
+								</form>
 								<br><br><br>
 							</div>
 						</div>
@@ -161,7 +164,7 @@
 								<br>
 								<h4>You look fantastic today! Have you done something different with your hair?
 								<br><br><br>
-								Have you filled your timesheet for last week? - Enter hours worked <a href="timesheet.html">here</a>
+								Have you filled your timesheet for last week? - Enter hours worked <a href="/timesheets">here</a>
 								</h4>
 								<br>
 							</div>

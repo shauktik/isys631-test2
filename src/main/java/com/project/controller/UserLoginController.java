@@ -26,13 +26,11 @@ public class UserLoginController {
 	}
 	
 	
-	@RequestMapping(value="/UserLoginController", method=RequestMethod.POST)
+	@RequestMapping(value="/UserProfile", method=RequestMethod.POST)
 	public String checkCredentials(String userName, String password){
 		String sql = "select count(*) from user_login where User_Name=? AND Password=?";
 		int count = this.getJdbcTemplate().queryForObject(sql, new Object[]{userName, password}, Integer.class);
-		
-		
-		
+
 		if (count==1){ 
 		session.setAttribute("user_name", userName);
 		//System.out.println("User Name::"+userName);

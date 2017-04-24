@@ -10,13 +10,15 @@
 	<link rel="stylesheet" type="text/css" href="master.css">
 	
 </head>
-
 	<body class ="landing">
+	<script type="text/javascript">
+	sessionStorage.setItem("userName",""); 
+	</script>
 		<div class="navlogo">
 			  <nav class="navbar navbar-default navbar-static-top">
 				<div class="container">
 				  <div class="navbar-header">
-					<a class="navbar-brand" href="www.google.com"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
+					<a class="navbar-brand" href="/index"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
 					</a>
 				  </div>	  
 				</div>
@@ -28,7 +30,7 @@
 			<div class="card card-container">
 				<img id="profile-img" class="profile-img-card" src="SuitcasePro.png" />
 				<p id="profile-name" class="profile-name-card"></p>
-				<form class="form-signin" action="/UserLoginController" method=POST>
+				<form class="form-signin" action="/UserProfile" method=POST>
 					<span id="reauth-email" class="reauth-email"></span>
 					<input type="email" name="userName" id="inputEmail" class="form-control" placeholder="Email address" required autofocus></input>
 					<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required></input>
@@ -45,8 +47,8 @@
 				</div>
 				<br>
 				<div class= "text-center">
-					<button type="button" class="btn btn-primary btn-block"><strong>Support</strong></button>
-						<button type="button" class="btn btn-primary btn-block"><strong>About</strong></button>
+					<form action="/contact"><button type="submit" class="btn btn-primary btn-block" onclick="/contact"><strong>Contact Us</strong></button></form>
+						<form action="/aboutUs"><button type="submit" class="btn btn-primary btn-block"><strong>About Us</strong></button></form>
 				</div>
 			</div>
 		</div>		

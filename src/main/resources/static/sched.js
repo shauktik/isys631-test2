@@ -42,6 +42,15 @@ function getwk1() {
 	}
 	return weekno;
 }
+/*changes*/
+function fncheck()
+    {
+     if(document.getElementById("dropBtn").value=="")
+           {
+              alert("This textbox should not be empty.");
+           }
+    }
+/*end changes*/
 document.getElementById("currwkdt").innerHTML = getcurrdt();
 document.getElementById("currwkdtr").innerHTML = getcurrdt();
 document.getElementById("currwk").innerHTML = getwk();
