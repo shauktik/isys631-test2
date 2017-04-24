@@ -5,6 +5,11 @@ body.landing{
 body{
 	background-color: #d7eaf4;
 }
+
+textarea {
+    resize: none;
+}
+
 .jumbotron{
 	border: 1px solid black;
 	margin: 12px auto;
