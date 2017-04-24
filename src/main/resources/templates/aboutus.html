@@ -22,7 +22,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://liveforeverdemo.herokuapp.com/"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
+				<a class="navbar-brand" id="aboutUsLogoLink"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
 				</a>
 			  </div>
 			  <div id="navbar3" class="navbar-collapse collapse">
@@ -105,9 +105,18 @@
 					</div>				
                 </div>
             </div>
-        </div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<script type="text/javascript">
+	var uname = sessionStorage.getItem("userName");
+	if(uname!==""){
+		document.getElementById("navbar3").style.visibility='visible';
+		document.getElementById("aboutUsLogoLink").href="/userProfilePage";
+	}
+	else{
+		document.getElementById("aboutUsLogoLink").href="/index";
+	}
+	</script>
 	</body>
 </html>
