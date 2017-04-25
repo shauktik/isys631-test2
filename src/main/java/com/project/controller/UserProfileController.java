@@ -68,8 +68,9 @@ public class UserProfileController {
 	}
 	
 	@RequestMapping(value="/updateUserDetails", method=RequestMethod.PUT)
-	public void updateUserDetails(UserProfile userProfile){
+	public String updateUserDetails(String user){
 		
+		return "success";
 	}
 
 }

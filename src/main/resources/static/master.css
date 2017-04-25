@@ -187,6 +187,9 @@ background-color: #337ab7;
 	max-height: 27px;
 	margin: auto 0px;
 }
+.eprof {
+		height: 485px;
+}
 @media screen and (max-width: 768px){
     .shorty{
 		text-align: center;
@@ -204,5 +207,8 @@ background-color: #337ab7;
 		width: 100px;
 	    border-radius: 3px;
 	    border: none;
+	}
+	.eprof {
+		height: 520px;
 	}
 }
