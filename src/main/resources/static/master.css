@@ -10,6 +10,10 @@ textarea {
     resize: none;
 }
 
+.borderless td, .borderless th {
+    border: 0px;
+}
+
 .jumbotron{
 	border: 1px solid black;
 	margin: 12px auto;
@@ -119,6 +123,15 @@ background-color: #337ab7;
     border-radius: 3px;
     border: none;
 }
+.btn.btn-sub {
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+	width: 132px;
+    border-radius: 3px;
+    border: none;
+}
 .section{
 	background-color: #d7eaf4;
 	padding: 25px;
@@ -179,9 +192,17 @@ background-color: #337ab7;
 		text-align: center;
 		margin: auto 0vw;
     }
-@media screen and (max-width: 768px){
     .navlogo .navbar-brand{
         width: 270px;
 		padding-top: 5%;
     }
+	.btn.btn-sub {
+	    padding: 0px;
+	    font-weight: 700;
+	    font-size: 14px;
+	    height: 36px;
+		width: 100px;
+	    border-radius: 3px;
+	    border: none;
+	}
 }

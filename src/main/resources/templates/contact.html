@@ -54,12 +54,12 @@
 							<div class="container-fluid">
 								<h3><strong>Contact Us</strong></h3>
 								<br>
-								<form class="form-horizontal">
+								<form class="form-horizontal" action="/submitQuery" method="post">
 									<div class="form-group">
 										<div>
 											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">First name:*</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm">
+   												<input type="text" class="form-control input-sm" name="firstName" id="fname1">
    											</div>
 									  	</div>
 									</div>
@@ -67,7 +67,7 @@
 										<div>
 											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Last name:*</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm">
+   												<input type="text" class="form-control input-sm" name="lastName" id="lname1">
    											</div>
 									  	</div>
 									</div>
@@ -75,7 +75,7 @@
 										<div>
 											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Email:*</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm">
+   												<input type="text" class="form-control input-sm" name="emailId" id="email1">
    											</div>
 									  	</div>
 									</div>
@@ -83,7 +83,7 @@
 										<div>
 											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Phone:</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm">
+   												<input type="text" class="form-control input-sm" name="phone" id="phone1" maxlength="14">
    											</div>
 									  	</div>
 									</div>
@@ -91,14 +91,14 @@
  										<div>
  											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Message:*</label>
 											<div>
-									  			<textarea class="form-control col-xs-12" rows="2" id="comment"></textarea>
+									  			<textarea class="form-control col-xs-12" rows="2" name="comment" id="comment1"></textarea>
 									 		 </div>
 										</div>
 									</div>
 									<div class="form-group">
 									  <div align="center">
-										<input class="btn btn-primary btn-contact" value="Submit" type="button">
-										<input class="btn btn-default btn-contact" value="Reset" type="reset">
+										<input class="btn btn-primary btn-contact" value="Submit" type="Submit">
+										<input class="btn btn-default btn-contact" value="Cancel" type="reset">
 									  </div>
 									</div>
 								</form>
@@ -120,13 +120,13 @@
    										<div>
    											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">First name:*</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm" name="firstName" required>
+   												<input type="text" class="form-control input-sm" name="firstName" id="firstName" required>
    											</div>
    										</div>
 										<div>
    											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Last name:*</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm" name="lastName" required>
+   												<input type="text" class="form-control input-sm" name="lastName" id="lastName" required>
    											</div>
    										</div>
  									</div>
@@ -134,13 +134,13 @@
    										<div>
    											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Email:*</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm" name="emailId" required>
+   												<input type="email" class="form-control input-sm" name="emailId" id="email" required>
    											</div>
    										</div>
 										<div>
    											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Phone:</label>
    											<div class="col-lg-4 col-sm-4 col-xs-7">
-   												<input type="text" class="form-control input-sm" name="phone">
+   												<input type="text" class="form-control input-sm" name="phone" id="phone" maxlength="15">
    											</div>
    										</div>
  									</div>
@@ -148,14 +148,14 @@
  										<div>
  											<label class="col-lg-2 col-md-2 col-sm-2 col-xs-5">Message:*</label>
 											<div>
-									  			<textarea class="form-control col-xs-12" rows="5" id="comment" name="comment"></textarea>
+									  			<textarea class="form-control col-xs-12" rows="5" id="comment" name="comment" id="comment"></textarea>
 									 		 </div>
 										</div>
 									</div>
 									<br>
 									<div class="form-group">
 									  <div align="center">
-										<input class="btn btn-primary btn-contact" value="Submit" type="submit">
+										<input class="btn btn-primary btn-contact" value="Submit" id="messageBox" type="submit">
 										<input class="btn btn-default btn-contact" value="Cancel" type="reset">
 									  </div>
 									</div>
@@ -183,7 +183,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- <script src="http://momentjs.com/downloads/moment.js"></script>
 		<script type="text/javascript" src="timesheet.js"></script> -->
-		
+		<script src="validate.js" type="text/javascript"></script>
 		<script type="text/javascript">
 	var uname = sessionStorage.getItem("userName");
 	if(uname!==""){
