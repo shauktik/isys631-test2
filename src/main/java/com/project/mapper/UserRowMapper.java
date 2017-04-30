@@ -7,6 +7,9 @@ import org.springframework.jdbc.core.RowMapper;
 
 import com.project.model.UserProfile;
 
+/*Mapper class to map retrieved
+ *  user profile information
+ *   to a User Profile bean*/
 public class UserRowMapper implements RowMapper<UserProfile>{
 
 	@Override

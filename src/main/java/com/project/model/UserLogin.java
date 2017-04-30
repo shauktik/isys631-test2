@@ -1,5 +1,8 @@
 package com.project.model;
 
+/*UserLogin.java
+ * Bean to store user's login information before
+ *  comparing it with stored database values*/
 public class UserLogin {
 	
 	private String userName;

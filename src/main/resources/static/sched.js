@@ -1,3 +1,17 @@
+//Validation for Dropshift message box
+function fncheck() {
+    if (document.getElementById("dropShiftMessage").value.trim() == "") {
+        alert("Oops! This textbox should not be empty. Please enter the week, day, and shift you want to drop.");
+        return false;
+    }
+    else
+    	{
+        alert("Thanks for letting us know! Your manager wil be in touch shortly.");
+    	return false;
+    	}
+}
+
+//Fetching week start and end dates on the basis of odd-even logic. Weeks will always be fetched in pairs, example - 1,2/3,4..etc
 function getcurrdt() {
 	var curr = new Date;
 	today = moment(curr).format('MM-DD-YYYY');
@@ -18,6 +32,8 @@ function getcurrdt() {
 	}
 	return finaldate;	
 }
+
+//Fetching week number for schedule (Odd)
 function getwk() {
 	var curr = new Date;
 	today = moment(curr).format('MM-DD-YYYY');
@@ -30,6 +46,7 @@ function getwk() {
 	}
 	return weekno;
 }
+//Fetching week number for schedule (Even)
 function getwk1() {
 	var curr = new Date;
 	today = moment(curr).format('MM-DD-YYYY');
@@ -42,15 +59,7 @@ function getwk1() {
 	}
 	return weekno;
 }
-/*changes*/
-function fncheck()
-    {
-     if(document.getElementById("dropBtn").value=="")
-           {
-              alert("This textbox should not be empty.");
-           }
-    }
-/*end changes*/
+
 document.getElementById("currwkdt").innerHTML = getcurrdt();
 document.getElementById("currwkdtr").innerHTML = getcurrdt();
 document.getElementById("currwk").innerHTML = getwk();

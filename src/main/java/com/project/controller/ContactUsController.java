@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/*Controller class 
+ * for Contact Us page*/
 @Controller
 public class ContactUsController {
 	
@@ -16,12 +18,14 @@ public class ContactUsController {
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
-
+	
+	//Method used to render Contact Us page to the user
 	@RequestMapping(value="/contact")
 	public String contactUs(){
 		return "contact";
 	}
 	
+	//Method to submit a general query to the website admin
 	@RequestMapping(value="/submitQuery", method=RequestMethod.POST)
 	public String contactUs(String firstName, String lastName, String emailId, String phone, String comment){
 		

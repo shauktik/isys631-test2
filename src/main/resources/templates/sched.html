@@ -12,6 +12,30 @@
     </head>
 
     <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	week1= $('#currwk').text();
+		week2= $('#currwk1').text();
+    	$.ajax({
+			type : "GET",
+			url : "/userSchedule",
+			
+			data :{
+				'week1':week1,'week2':week2
+			},
+			
+			timeout : 1000,
+			
+			success : function(data){
+				
+			}
+		})
+	});
+    
+    
+    </script>
+		<!--Navigation bar code-->
 		<div class="navlogo">
 		  <nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
@@ -25,11 +49,13 @@
 				<a class="navbar-brand" href="/userProfilePage"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
 				</a>
 			  </div>
+			  <!--Navigation links to other pages-->
 			  <div id="navbar3" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						  <li><a href="/mySchedule">Home</a></li>
 						  <li><a href="/userProfilePage">Edit Profile</a></li>
 						  <li><a href="/timesheets">Timesheets</a></li>
+					  <!--Dropdown Menu links-->	
 					  <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Options<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
@@ -43,7 +69,8 @@
 			  </div>
 			</div>
 		  </nav>
-		</div>	
+		</div>
+		<!--Code for main schedule display-->
 		<div class="container-fluid">			
 			<div class="row">
 				<div class="container-fluid">
@@ -53,6 +80,7 @@
 								<br>
 								<h3><strong>Schedule for the weeks <span id="currwkdt"></span></strong></h3>
 								<br>
+								<!--Display Weekly Schedule-->
 								<table class="table table-striped">
 									<thead>
 										<tr>
@@ -66,33 +94,34 @@
 											<th>Saturday</th>
 										</tr>
 									</thead>
-									<tbody>
+										<tbody>
 										<tr>
-										  <th scope="row"><span id="currwk"></span></th>
-										  <td><span id="bamorn" class="badge"> </span><span id="banig" class="badge"> </span></td>
-										  <td></td>
-										  <td></td>
-										  <td><span id="bamorn" class="badge"> </span></td>
-										  <td></td>
-										  <td></td>
-										  <td><span id="baaft" class="badge"> </span></td>
+										<th scope="row"><span id="currwk"></span></th>
+										<td id="sunday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="monday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="tuesday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="wednesday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="thursday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="friday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="saturday1"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
 										</tr>
 										<tr>
-										  <th scope="row"><span id="currwk1"></span></th>
-										  <td></td>
-										  <td></td>
-										  <td><span id="bamorn" class="badge"> </span></td>
-										  <td></td>
-										  <td><span id="baaft" class="badge"> </span></td>
-										  <td></td>
-										  <td><span id="bamorn" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<th scope="row"><span id="currwk1"></span></th>
+										<td  id="sunday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="monday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="tuesday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="wednesday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="thursday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="friday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
+										<td id="saturday2"><span id="bamorn" class="badge"> </span><span id="baaft" class="badge"> </span><span id="banig" class="badge"> </span></td>
 										</tr>
-									</tbody>
+										</tbody>
 								</table>
 								<br>
 							</div>
 						</div>
 					</div>
+					<!--Display Weekly Schedule for mobile-->
 					<div class="hidden-lg hidden-md hidden-sm col-xs-12">
 						<div class="jumbotron">
 							<div class="container-fluid">
@@ -139,14 +168,15 @@
 							</div>
 						</div>
 					</div>
+					<!--Drop Shift Module-->
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 						<div class="jumbotron">
 							<div id="schedrop" class="container-fluid">
 								<br>
-								<form action="/shiftdrop" method=POST>
+								<form action="/shiftdrop" method="post">
 								<div class="form-group">
 								  <label>Emergency? Need to drop a shift?</label>
-								  <textarea class="form-control" rows="3" name="dropshift" placeholder="Please enter week number,shift type (morning/afternoon/night), optional message and day separated by spaces in your message." name="dropShiftMessage"></textarea>
+								  <textarea class="form-control" rows="3" placeholder="Please enter week number, shift type (morning/afternoon/night), optional message and day, each separated by a space in your message." name="dropShiftMessage" id="dropShiftMessage" required></textarea>
 								</div>
 								<img src="Sad_Suitcase_opt.jpg" alt="..." class="img-responsive pull-left">
 								<br>
@@ -158,6 +188,7 @@
 					</div>
 				</div>
 			</div>
+			<!--Interaction Module and link to Timesheet-->
 			<div class="row">
 				<div class="container-fluid">
 					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -172,6 +203,7 @@
 							</div>
 						</div>
 					</div>
+					<!--Ledgend Module for color coded schedule-->
 					<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
 						<div id="legend" class="jumbotron">
 							<div class="container-fluid">					
@@ -187,6 +219,7 @@
 				</div>
 			</div>
 		</div>
+		<!--Links to Javascript and Bootstrap code-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="http://momentjs.com/downloads/moment.js"></script>

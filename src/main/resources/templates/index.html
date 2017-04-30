@@ -14,7 +14,7 @@
 	<script type="text/javascript">
 	sessionStorage.setItem("userName",""); 
 	</script>
-		<div class="navlogo">
+		<div class="navlogo"> <!-- Navigation Bar -->
 			  <nav class="navbar navbar-default navbar-static-top">
 				<div class="container">
 				  <div class="navbar-header">
@@ -25,11 +25,11 @@
 			  </nav>
 			</div>
 			
-		<div class="container-fluid">
+		<div class="container-fluid"> <!-- Places the card in a container-->
 		<div class="container">
 			<div class="card card-container">
-							<h3 align="center">Employee Portal</h3>
-				<img id="profile-img" class="profile-img-card" src="SuitcasePro.png" />
+							<h3 align="center">Employee Portal</h3> <!-- Aligns card to center of container -->
+				<img id="profile-img" class="profile-img-card" src="SuitcasePro.png" /> <!-- picture of KC in the card -->
 				<p id="profile-name" class="profile-name-card"></p>
 				<form class="form-signin" action="/UserProfile" method=POST>
 					<span id="reauth-email" class="reauth-email"></span>
@@ -43,9 +43,8 @@
 					<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button><br>
 				</form>
 				<div class= "text-center">
-					<form action="/contact"><button type="submit" class="btn btn-primary btn-block" onclick="/contact"><strong>Contact Us</strong></button></form>
-					<ul type="none"><li class = "divider"></li></ul>
-					<form action="/aboutUs"><button type="submit" class="btn btn-primary btn-block"><strong>About Us</strong></button></form>
+					<form action="/contact" class="formWithButtons"><button type="submit" class="btn btn-primary btn-block" onclick="/contact"><strong>Contact Us</strong></button></form>
+					<form action="/aboutUs" class="formWithButtons"><button type="submit" class="btn btn-primary btn-block"><strong>About Us</strong></button></form>
 				</div>
 			</div>
 		</div>		

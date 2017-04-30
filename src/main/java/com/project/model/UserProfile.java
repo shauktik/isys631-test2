@@ -1,5 +1,10 @@
 package com.project.model;
 
+
+/*UserProfile.java
+ * Bean to store retrieved user information from database 
+ * in memory for operation*/
+
 public class UserProfile {
 	
 	private String firstName;
@@ -52,7 +57,24 @@ public class UserProfile {
 		return ssn;
 	}
 	public void setSsn(String ssn) {
-		this.ssn = ssn;
+		final StringBuilder temp = new StringBuilder();
+		for(int i=0; i<=temp.length(); i++)
+		{
+			if (i<3)
+				temp.append("*");
+			else if (i==3)
+				temp.append("-");
+			else if (i>3 && i<6)
+				temp.append("*");
+			else if (i==6)
+				temp.append("-");
+			else
+			{
+				temp.append(ssn.substring(7));
+				break;
+			}
+		}
+		this.ssn = temp.toString();
 	}
 	public String getJobRole() {
 		return jobRole;

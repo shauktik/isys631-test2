@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.project.mapper.UserSchedRowMapper;
 import com.project.model.UserSched;
 
+/*Controller class 
+ * for Drop shift user feature */
 @Controller
 public class DropShiftController {
 
@@ -39,9 +41,10 @@ public class DropShiftController {
 		this.userSched = userSched;
 	}
 
+	//
 	@RequestMapping(value="/shiftdrop",  method=RequestMethod.POST)
 	public String dropShiftByUserName(String dropShiftMessage){
-		
+		System.out.println("Drop Shift Controller called");
 		//int sched_id= 0;
 		String[] dropMessage = dropShiftMessage.split(" ");
 		String userName = (String)session.getAttribute("user_name");

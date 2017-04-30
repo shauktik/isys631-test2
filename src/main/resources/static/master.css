@@ -1,19 +1,9 @@
-body.landing{
-	background: url("chicago3.jpg") no-repeat center center fixed;
-	background-size: cover;
-}
+/*Default background color for all pages*/
 body{
 	background-color: #d7eaf4;
 }
 
-textarea {
-    resize: none;
-}
-
-.borderless td, .borderless th {
-    border: 0px;
-}
-
+/*Defining containers and headers for all pages*/
 .jumbotron{
 	border: 1px solid black;
 	margin: 12px auto;
@@ -30,7 +20,16 @@ textarea {
 	font-size: 4vh;
 	text-align: center;
 }
+/*Making messagebox fixed i.e. not resizable for all pages*/
+textarea {
+    resize: none;
+}
+/*Button setting for all pages*/
+.button{
+	padding: 5px;
+}
 
+/*Common navbar settings for all pages*/
 .navlogo .navbar-brand {
   padding-top: 5px;
   padding-left: 0px;
@@ -49,7 +48,7 @@ textarea {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
  a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #ffffff; /*BACKGROUND color for active*/
+	color: #ffffff; /*Background color for active*/
 	background-color: #337ab7;
 }
 .navbar-default {
@@ -82,6 +81,19 @@ textarea {
 .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
 color: #ffffff;
 background-color: #337ab7;
+}
+
+/*Login page*/
+body.landing{
+	background: url("chicago3.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+.formWithButtons
+{
+width: 133px;
+display: inline-block;
+margin: 0px;
 }
 
 .card-container.card {
@@ -143,10 +155,11 @@ background-color: #337ab7;
 	padding: 10px;
 	border-radius: 10px;
 }
-.button{
-	padding: 5px;
+.borderless td, .borderless th {
+    border: 0px;
 }
 
+/*Schedule page*/
 #schedrop.container-fluid{
 	padding: 0px;
 }
@@ -177,6 +190,8 @@ background-color: #337ab7;
 #batod.badge{
 	background-color:#82556e;
 }
+
+/*Timesheet page*/
 .shorty{
 	max-height: 21px;
 	max-width: 70px;
@@ -187,9 +202,13 @@ background-color: #337ab7;
 	max-height: 27px;
 	margin: auto 0px;
 }
+
+/*Edit Profile page*/
 .eprof {
 		height: 485px;
 }
+
+/*Responsive code for all pages*/
 @media screen and (max-width: 768px){
     .shorty{
 		text-align: center;
@@ -210,5 +229,12 @@ background-color: #337ab7;
 	}
 	.eprof {
 		height: 520px;
+	}
+
+	.formWithButtons
+	{
+	width: 115px;
+	display: inline-block;
+	margin: 0px;
 	}
 }

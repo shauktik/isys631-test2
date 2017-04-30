@@ -4,14 +4,16 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		 <!--Tab description-->
 		<title>Enter Timesheet</title>
+		<!--Links to CSS sheets-->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="master.css">
 
 	</head>
 
 	<body>
+		<!--Navigation Bar Code-->
 		<div class="navlogo">
 		  <nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
@@ -25,6 +27,7 @@
 				<a class="navbar-brand" href="/userProfilePage"><img src="Suitcase_logo_opt.png" class="img-responsive" alt="Forever Live Hotels">
 				</a>
 			  </div>
+				<!--Collapsable Menu code-->
 			  <div id="navbar3" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						  <li><a href="/mySchedule">Home</a></li>
@@ -44,6 +47,7 @@
 			</div>
 		  </nav>
 		</div>
+        <!--Main Section - Timesheet Entry code-->
 		<div class="container-fluid">
 			<div class= "row">
 				<div class="container-fluid">
@@ -54,12 +58,14 @@
 								<table class="table table-striped">
 									<thead>
 										<tr>
+									<!--Display Weeks for inputting time-->
 											<th>Day</th>
 											<th>Week of <span id="currwkdt1"></span></th>
 											<th>Week of <span id="currwkdt2"></span></th>
 										</tr>
 									</thead>
 									<tbody>
+									<!--Week 1 Inputs-->
 										<tr>
 										  <td>Sunday</td>
 										  <td><input onblur="findTotal()" type="text" class="form-control shorty" name="tw1" placeholder="0.0"></td>
@@ -102,8 +108,9 @@
 										</tr>
 									</tbody>
 								</table>								
+							<!--Submit Timesheet button-->
 								<div align="center">
-									<input class="btn btn-primary" value="Submit Timesheet" type="button">
+									<input class="btn btn-primary" value="Submit Timesheet" type="button" onclick="submitTime()">
 								</div>
 							</div>
 						</div>
@@ -116,6 +123,7 @@
 								<table class="table table-striped">
 									<thead>
 										<tr>
+								        <!--Display second week for inputting time-->
 											<th>Day<br></th>
 											<th><span id="currwkdt1r"></span></th>
 											<th><span id="currwkdt2r"></span></th>
@@ -123,6 +131,7 @@
 									</thead>
 									<tbody>
 										<tr>
+										<!--Week 2 inputs-->
 										  <td>Sun</td>
 										  <td><input onblur="findTotal()"type="text" class="form-control shorty" name="tw1" placeholder="0.0"></td>
 										  <td><input onblur="findTotal()" type="text" class="form-control shorty" name="tw2" placeholder="0.0"></td>
@@ -165,11 +174,12 @@
 									</tbody>
 								</table>								
 								<div align="center">
-									<input class="btn btn-primary" value="Submit Timesheet" type="button">
+									<input class="btn btn-primary" value="Submit Timesheet" type="button" onclick="submitTime()">
 								</div>
 							</div>
 						</div>
 					</div>
+                    <!--Interaction/KC Module-->
 					<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
 							<div class="jumbotron">
 								<div class="container-fluid">
@@ -186,6 +196,7 @@
 				</div>
 			</div>
 		</div>   
+		<!--Links to external script files-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="http://momentjs.com/downloads/moment.js"></script>

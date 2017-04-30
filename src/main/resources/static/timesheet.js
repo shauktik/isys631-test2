@@ -1,5 +1,9 @@
 //global validation flag, check if true before submitting the form
 dataError = false;
+
+//Fetching week start and end dates on the basis of odd-even logic. Weeks will always be fetched in pairs, example - 1,2/3,4..etc
+//Timesheet weeks will be 2 weeks before schedule weeks
+//Week - 1
 function getcurrdt1() {
     var curr = new Date;
     today = moment(curr).format('MM-DD-YYYY');
@@ -12,7 +16,7 @@ function getcurrdt1() {
         var finaldate = new String(firstday1 + "-" + lastday1);
     }
     else {
-        var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+        var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay() - 14));
         var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 6));
         firstday1 = moment(firstday).format('MM/DD');
         lastday1 = moment(lastday).format('MM/DD');
@@ -20,6 +24,8 @@ function getcurrdt1() {
     }
     return finaldate;
 }
+
+//Week - 2
 function getcurrdt2() {
     var curr = new Date;
     today = moment(curr).format('MM-DD-YYYY');
@@ -32,7 +38,7 @@ function getcurrdt2() {
         var finaldate = new String(firstday1 + "-" + lastday1);
     }
     else {
-        var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 7));
+        var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay() - 7));
         var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay() + 6));
         firstday1 = moment(firstday).format('MM/DD');
         lastday1 = moment(lastday).format('MM/DD');
@@ -40,6 +46,8 @@ function getcurrdt2() {
     }
     return finaldate;
 }
+
+//Addition of all the hours from week1 and week2 into respective total fields
 function findTotal() {
     var arr = document.getElementsByName('tw1');
     var tot = 0;
@@ -63,34 +71,44 @@ document.getElementById("currwkdt2").innerHTML = getcurrdt2();
 document.getElementById("currwkdt1r").innerHTML = getcurrdt1();
 document.getElementById("currwkdt2r").innerHTML = getcurrdt2();
 
-/*New changes*/
+//Validate that timesheet is entered as numbers or decimals
 function validateTimesheet(input) {
     var re = /[^0-9\.]/;
     return re.test(input);
 }
+
+//Validate all timesheet input boxes at once on submit
 function submitTime() {
+		  var flag = false;
+		  $('.shorty').filter(function() {
+		    if (validateTimesheet($(this).val()) || parseFloat($(this).val()) > 24) {
+		       dataError = true;
+		      //no need to iterate further
+		      return false;
+		    }
+		  });
+
     if (!dataError)
-        alert("Your time sheet has been submitted.");
+        alert("Thanks! Your time sheet has been submitted.");
     else
-        alert("Please check your time values for errors.");
+        alert("Uh Oh. Please check your time values for errors.");
 }
 
+//bind control specific events on page load 
 $(document).ready(function () {
-    //restricting length of input field
-    $("input[type='text']").attr("maxlength", "5");
-   // $("input[type='text']").attr("type", "number");
-    //validate input Number in timesheet
-    $('input').blur(function () {
+	//restricting length of input field
+    $('.shorty').attr("maxlength", "5");
+    
+    //validate input Number in timesheet and highlight error cells as red
+    $('.shorty').blur(function () {
         if (validateTimesheet($(this).val()) || parseFloat($(this).val()) > 24) {
             $(this).css("border-color", "red");
-            dataError = true;
         }
         else {
             $(this).css("border-color", "#CCCCCC");
-            $(this).val(parseFloat($(this).val()).toFixed(2));
-            dataError = false;
+            if ($(this).val() != "")
+                $(this).val(parseFloat($(this).val()).toFixed(2));
         }
     });
 
 });
-//End new changes

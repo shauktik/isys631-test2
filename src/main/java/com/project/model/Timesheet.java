@@ -2,6 +2,9 @@ package com.project.model;
 
 import java.util.List;
 
+/*Timesheet.java
+ * Bean class to hold 
+ * timesheet entries for submission by a user*/
 public class Timesheet {
 	
 	private List<String> timeEntry;

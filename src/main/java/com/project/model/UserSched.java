@@ -1,5 +1,9 @@
 package com.project.model;
 
+
+/*UserProfile.java 
+ * Bean to store user-specific schedule information 
+ * for displaying to the frontend*/
 public class UserSched {
 	
 	private int id;
@@ -37,7 +41,5 @@ public class UserSched {
 	public void setShiftType(String shiftType) {
 		this.shiftType = shiftType;
 	}
-	
-	
 
 }
