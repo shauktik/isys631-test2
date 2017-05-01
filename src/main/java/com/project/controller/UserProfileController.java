@@ -70,19 +70,10 @@ public class UserProfileController {
 	}
 	
 	//Method to save changes made by user to profile information to the database
-	@RequestMapping(value="/updateUserDetails", method=RequestMethod.PUT)
-	public String updateUserDetails(String fname, String lname, String addressline1, String state, String email, String phone, String dob, String ssn, String jobrole){
-		
-		String[] address = addressline1.split(",");
-		String address1 = address[0];
-		String address2 = address[2];
-		
-		String[] stateAndZip = state.split(",");
-		
-		String state1 = stateAndZip[0];
-		String zip1 = stateAndZip[1];
-
-		this.jdbcTemplate.update("", new Object[]{});
+	@RequestMapping(value="/updateUserDetails", method=RequestMethod.POST)
+	public String updateUserDetails(String addressline1, String addressline2, String state, String zip, String phone){
+		String userName = (String)session.getAttribute("user_name");
+		this.jdbcTemplate.update("update user_profile set address_line1 =?, Address_Line2 = ?, state =?, zip =?, Phone_Number = ? where User_Name = ?", new Object[]{addressline1,addressline2,state,zip,phone,userName});
 		return "success";
 	}
 
