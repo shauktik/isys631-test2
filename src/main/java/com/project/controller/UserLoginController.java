@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.project.model.UserProfile;
+
 /*Controller class 
  * for User Login*/
 @Controller
@@ -19,6 +21,7 @@ public class UserLoginController {
 	@Autowired
 	HttpSession session;
 	
+	
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -27,10 +30,12 @@ public class UserLoginController {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 	
+	
+	
 	//Method to authenticate user against entered credentials
 	@RequestMapping(value="/UserProfile", method=RequestMethod.POST)
 	public String checkCredentials(String userName, String password){
-		
+		try{
 		//JDBCTemplate code and query to search for username and password combination in database
 		String sql = "select count(*) from user_login where User_Name=? AND Password=?";
 		int count = this.getJdbcTemplate().queryForObject(sql, new Object[]{userName, password}, Integer.class);
@@ -40,9 +45,15 @@ public class UserLoginController {
 		//System.out.println("User Name::"+userName);
 		return "success";
 		}
+		
+		else{
+			return "index";
+		}
+		}
+		catch(Exception e){
+			return "index";
+		}
 
-		return "index";
-			
 	}
 	
 		
